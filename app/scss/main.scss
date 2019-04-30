@@ -1,11 +1,12 @@
 @import "vars";
 @import "libs";
+@import "header";
 
 body {
 	font-size: 16px;
 	min-width: 320px;
 	position: relative;
-	line-height: 1.65;
+	line-height: 1.5;
 	font-family: $default-font;
 	overflow-x: hidden;
 	color: $text;
@@ -19,6 +20,16 @@ body {
 			border-color: green;
 		}
 	}
+	a{
+		text-decoration: none;
+		&:hover{
+			text-decoration: none;
+		}
+	}
+}
+
+.container{
+	max-width: 1170px;
 }
 
 .img-responsive {
@@ -38,6 +49,47 @@ b, strong {
 	font-weight: bold;
 }
 
+.to-uppercase{
+	text-transform: uppercase;
+}
 
+.svg-ring-fill{
+	transform: rotate(90deg);
+	animation: ring-fill 2s ease-in-out;
+}
 
+@keyframes ring-fill{
+	from{
+		stroke-dashoffset: 188.4;
+	}
+	to{
+		stroke-dashoffset: 0;
+	}
+}
+
+.main-btn{
+	padding: 20px 40px;
+	&.yellow-black{
+		background-color: $yellow;
+		color: $bg-black;
+	}
+	&.black-yellow{
+		background-color: $bg-black;
+		color: $yellow;
+	}
+	&.white-black{
+		background-color: $white;
+		color: $bg-black;
+	}
+	&.transparent-black{
+		background-color: transparent;
+		color: $bg-black;
+		border: 1px solid $bg-black;
+	}
+	&.transparent-white{
+		background-color: transparent;
+		color: $white;
+		border: 1px solid $white;
+	}
+}
 @import "media"; // Always at the end

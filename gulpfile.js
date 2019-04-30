@@ -38,6 +38,11 @@ gulp.task('styles', function() {
 gulp.task('scripts', function() {
 	return gulp.src([
 		'app/libs/jquery/dist/jquery.min.js',
+		'app/libs/easing/jquery.easing.1.3.js',
+		'app/libs/lightbox/js/lightbox.min.js',
+		'app/libs/slick/js/slick.js',
+		'app/libs/modalVideo/js/jquery-modal-video.min.js',
+		'app/libs/parallax/parallax.min.js',
 		'app/js/common.js', // Always at the end
 		])
 	.pipe(concat('scripts.min.js'))
